@@ -5,9 +5,20 @@ nav {
   color: #FFF;
   padding: 0 1.5em 0 1.5em;
   display: flex;
+  justify-content: space-between;
   align-items: center;
- }
+}
 
- nav span {
+nav span {
   font-family: Bungee, sans-serif;
- }
+}
+
+#right-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav #right-nav .bold {
+  font-weight: 800;
+  margin-right: 4px;
+}
