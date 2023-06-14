@@ -1,9 +1,14 @@
-header {
-  height: 400px;
-  top: 120px;
-  background-color: gold;
+#header {
+  height: 520px;
   width: 100vw;
+  background-color: gold;
   display: flex;
   justify-content: center;  
   align-items: center;
+  flex-direction: column;
+   background-image: url("/images/pattern.png");
+}
+
+#header .header-img{
+  padding-top: 150px;
 }
