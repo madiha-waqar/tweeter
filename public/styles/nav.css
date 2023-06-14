@@ -13,7 +13,7 @@ nav span {
   font-family: Bungee, sans-serif;
 }
 
-#right-nav {
+#right-nav .text {
   display: flex;
   justify-content: space-between;
 }
@@ -21,4 +21,9 @@ nav span {
 nav #right-nav .bold {
   font-weight: 800;
   margin-right: 4px;
+}
+
+nav #right-nav .arrow {
+  display: flex;
+  justify-content: center;
 }
