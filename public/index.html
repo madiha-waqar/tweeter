@@ -65,7 +65,6 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
-      <h2>Tweets</h2>
       <form action="/tweets/" method="POST">
         <div class="tweet-details">
           <label for="tweet-text">What are you humming about?</label>
@@ -78,19 +77,23 @@
       </form>
     </section>
 
-    <section>
-      <article class="new-tweets">
+    <section class="all-tweets">
+      <article class="tweet">
         <header>
           <div>
-            <img src="./images/John.png">
-            <h3>Newton</h3>
+            <img src="./images/John.png" alt="icon">
+            <p>Newton</p>
           </div>
-          <p>@NewtonForApple</p>
+          <p>@SirIsaac</p>
         </header>
         <p>If I have seen further it is by standing on the shoulders of giants</p>
         <footer>
           <p>10 days ago</p>
-          <img src="./icons">
+          <p>
+            <i class="fa-solid fa-flag"></i>
+            <i class="fa-solid fa-retweet"></i>
+            <i class="fa-solid fa-heart"></i>
+          </p>
         </footer>
       </article>
     </section>
