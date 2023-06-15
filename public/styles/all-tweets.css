@@ -2,7 +2,7 @@
   margin-top: 80px;
   width: 100%;
   border: 5px solid #424949;
-  border-radius: 3px;
+  border-radius: 2px;
   display: flex;
   flex-direction: row;
   color: #545149;
@@ -64,4 +64,12 @@
 .tweet>footer>p>i {
   padding: 0 5px 0 5px;
   color: #32478a;
+}
+
+.all-tweets:hover {
+  box-shadow: 7px 7px 0 #acb5cf;
+}
+
+.tweet>footer>p>i:hover {
+  color: #b6942e ;
 }
