@@ -4,7 +4,7 @@
    flex-direction: column;
    justify-content: center;
    align-content: center;
-   margin-top: 20px;
+   margin-top: 70px;
  }
 
  .new-tweet h2 {
@@ -14,7 +14,8 @@
  }
 
  .new-tweet .tweet-details {
-   border-bottom: 2px solid black;
+  border-bottom: 5px solid #424949;
+  font-weight: bold;
  }
 
  .tweet-details {
