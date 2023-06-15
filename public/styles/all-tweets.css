@@ -5,8 +5,8 @@
   border-radius: 3px;
   display: flex;
   flex-direction: row;
-  color: #545149
-  font-family: 'Source Sans 3', sans-serif;
+  color: #545149;
+  font-family: "Source Sans 3", sans-serif;
 }
 
 .tweet {
