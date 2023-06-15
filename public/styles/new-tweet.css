@@ -42,3 +42,7 @@
    background-color: #4056A1;
    color: #FFF;
  }
+
+ .over-limit {
+  color: red;
+ }

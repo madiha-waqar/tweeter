@@ -6,7 +6,15 @@ $(document).ready(() => {
 
     const numOfChar = $(this).val().length
     const remainingChars = 140 - numOfChar;
-    const counter = $(this).parent().siblings().children()[1];
-    counter.innerHTML = remainingChars
+
+    const charCounter = $(this).parent().siblings().children('.counter');
+    charCounter.text(remainingChars);
+
+    if (remainingChars < 0) {
+      charCounter.addClass('over-limit');
+
+    } else {
+      charCounter.removeClass('over-limit');
+    }
   })
-})  
+});
