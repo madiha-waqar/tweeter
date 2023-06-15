@@ -30,12 +30,16 @@
    border: none;
  }
 
+ .tweet-details textarea:focus {
+  outline: none;
+}
+
  .new-tweet .tweet-submission {
    display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+   flex-direction: row;
+   justify-content: space-between;
    font-family: Bungee, sans-serif;
-   
+
  }
 
  .tweet-submission button {
@@ -44,5 +48,5 @@
  }
 
  .over-limit {
-  color: red;
+   color: red;
  }
