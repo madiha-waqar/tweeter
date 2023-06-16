@@ -33,6 +33,7 @@
   margin-right: 10px;
 }
 
+/* Tweeter handle */
 .tweet header>p {
   display: flex;
   font-size: 22px;
@@ -40,6 +41,7 @@
   color: #998690;
 }
 
+/* Tweet text */
 .tweet>p {
   margin: 15px;
   font-weight: bold;
@@ -48,28 +50,32 @@
   letter-spacing: 0.5px;
 }
 
-.tweet footer {
+/* Footer for tweet timestamp and tweet social icons*/
+footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 0 10px 0 10px;
 }
 
-.tweet>footer>p {
+/* Footer's direct p child*/
+footer>p {
   margin-top: 0;
   font-weight: bold;
   color: #44423c;
 }
 
-.tweet>footer>p>i {
+footer>p>i {
   padding: 0 5px 0 5px;
   color: #32478a;
 }
 
+/* Add shadow on tweet box on hovering */
 .all-tweets:hover {
   box-shadow: 7px 7px 0 #acb5cf;
 }
 
-.tweet>footer>p>i:hover {
+/* Change color of icons on hovering */
+i:hover {
   color: #b6942e ;
 }

@@ -1,3 +1,4 @@
+ /* New tweet section */
  .new-tweet {
    width: 100%;
    display: flex;
@@ -7,23 +8,15 @@
    margin-top: 70px;
  }
 
- .new-tweet h2 {
-   display: flex;
-   justify-content: center;
-   align-items: center;
- }
-
- .new-tweet .tweet-details {
-  border-bottom: 5px solid #424949;
-  font-weight: bold;
- }
-
  .tweet-details {
+   border-bottom: 5px solid #424949;
+   margin-bottom: 15px;
+   font-weight: bold;
    display: flex;
    flex-direction: column;
-   margin-bottom: 15px;
  }
 
+ /* Tweet text input */
  .tweet-details textarea {
    margin-top: 5px;
    margin-bottom: 15px;
@@ -32,23 +25,24 @@
  }
 
  .tweet-details textarea:focus {
-  outline: none;
-}
+   outline: none;
+ }
 
- .new-tweet .tweet-submission {
+ .tweet-submission {
    display: flex;
    flex-direction: row;
    justify-content: space-between;
    font-family: Bungee, sans-serif;
-
  }
 
+ /* Tweet button */
  .tweet-submission button {
    background-color: #4056A1;
    color: #FFF;
    border: none;
  }
 
+ /* Counter turns red when goes over limit */
  .over-limit {
    color: red;
  }

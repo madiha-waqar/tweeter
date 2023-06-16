@@ -1,14 +1,16 @@
+/* This header section styling with user profile image and name on tweeter page */
+
 #header {
-  height: 520px;
-  width: 100vw;
-  background-color: gold;
-  display: flex;
-  justify-content: center;  
-  align-items: center;
-  flex-direction: column;
-   background-image: url("/images/pattern.png");
+	height: 520px;
+	width: 100vw;
+	background-color: gold;
+	background-image: url("/images/pattern.png");
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 
-#header .header-img{
-  padding-top: 150px;
+#header .header-img {
+	padding-top: 150px;
 }

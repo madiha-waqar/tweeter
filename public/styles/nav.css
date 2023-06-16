@@ -1,3 +1,4 @@
+/* Navigation bar Styling */
 nav {
   height: 120px;
   width: 100vw;
@@ -10,10 +11,12 @@ nav {
   position: fixed;
 }
 
+/* Tweeter Text */
 nav span {
   font-family: Bungee, sans-serif;
 }
 
+/* Text Styling For Navigation Right Side */
 #right-nav .text {
   display: flex;
   justify-content: space-between;
@@ -24,6 +27,7 @@ nav #right-nav .bold {
   margin-right: 4px;
 }
 
+/* New Tweet Arrow */
 nav #right-nav .arrow {
   display: flex;
   justify-content: center;
