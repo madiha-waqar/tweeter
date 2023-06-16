@@ -23,7 +23,7 @@ $(document).ready(function() {
       },
       "created_at": 1461113959088
     }
-  ]
+  ];
 
   const createTweetElement = function(tweetObj) {
     const $tweet = $(`
@@ -46,16 +46,14 @@ $(document).ready(function() {
           </footer>
         </article>
     `);
-    $('.all-tweets').append($tweet);
-    console.log($tweet);
     return $tweet;
  }
 
   const renderTweets = function(tweetObjArr) {
-    // loops through tweets
-    createTweetElement(tweetObjArr[1]);
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
+    for (const tweet of tweetObjArr) {
+    const $tweet = createTweetElement(tweet);
+    $('.all-tweets').append($tweet);
+    }
   }
 
   renderTweets(tweetdata);
