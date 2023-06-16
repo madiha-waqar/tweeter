@@ -1,7 +1,7 @@
 // Fake data taken from initial-tweets.json
-$(document).ready(function() {
+$(document).ready(function () {
 
-  const createTweetElement = function(tweetObj) {
+  const createTweetElement = function (tweetObj) {
     const $tweet = $(`
         <article class="tweet">
           <header>
@@ -25,7 +25,7 @@ $(document).ready(function() {
     return $tweet;
   }
 
-  const renderTweets = function(tweetObjArr) {
+  const renderTweets = function (tweetObjArr) {
     for (const tweet of tweetObjArr) {
       const $tweet = createTweetElement(tweet);
       $('.all-tweets').append($tweet);
@@ -36,18 +36,28 @@ $(document).ready(function() {
   form.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    const serializedData = $(this).serialize();
-    $.post('/tweets', serializedData)
-      .then(serializedData => {
-        console.log(serializedData);
-      })
-      .catch(error => {
-        console.error(error);
-      });
+    const newTweetText = $(this).find('textarea').val();
+
+    if (!newTweetText) {
+      alert('Your tweet must not be empty. What would you like to tweet about today?');
+
+    } else if (newTweetText.length > 140) {
+      alert('Your tweet exceeds the maximum character limit of 140!');
+
+    } else {
+      const serializedData = $(this).serialize();
+      $.post('/tweets', serializedData)
+        .then(serializedData => {
+          console.log(serializedData);
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    }
   });
 
   const loadTweets = () => {
-    $.get('/tweets')
+  $.get('/tweets')
 
     .then(response => {
       console.log(response)
@@ -57,7 +67,7 @@ $(document).ready(function() {
       console.error(error);
     });
 };
-    
-  loadTweets();
+
+loadTweets();
 
 });
