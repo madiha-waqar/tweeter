@@ -28,7 +28,7 @@ $(document).ready(function () {
   const renderTweets = function (tweetObjArr) {
     for (const tweet of tweetObjArr) {
       const $tweet = createTweetElement(tweet);
-      $('.all-tweets').append($tweet);
+      $('.all-tweets').prepend($tweet); // prepend will add new tweet to the beginning
     }
   }
 
@@ -50,6 +50,7 @@ $(document).ready(function () {
         .then(serializedData => {
           console.log(serializedData);
         })
+        .then(loadTweets())
         .catch(error => {
           console.error(error);
         });
@@ -67,7 +68,5 @@ $(document).ready(function () {
       console.error(error);
     });
 };
-
-loadTweets();
 
 });
