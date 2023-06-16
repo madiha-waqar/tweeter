@@ -1,17 +1,15 @@
 .all-tweets {
-  margin-top: 80px;
   width: 100%;
-  border: 5px solid #424949;
-  border-radius: 2px;
-  display: flex;
-  flex-direction: row;
-  color: #545149;
+  margin-top: 80px;
   font-family: "Source Sans 3", sans-serif;
 }
 
 .tweet {
   width: 100%;
-  margin: 25px 25px 0 25px;
+  border: 5px solid #424949;
+  margin-bottom: 60px;
+  border-radius: 2px;
+  padding: 20px;
 }
 
 .tweet header {
@@ -71,7 +69,7 @@ footer>p>i {
 }
 
 /* Add shadow on tweet box on hovering */
-.all-tweets:hover {
+.tweet:hover {
   box-shadow: 7px 7px 0 #acb5cf;
 }
 
