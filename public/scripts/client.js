@@ -58,4 +58,8 @@ $(document).ready(function() {
 
   renderTweets(tweetdata);
 
+  $('new-tweet form').submit(event => {
+    event.preventDefault();
+  })
+
 });
