@@ -1,5 +1,5 @@
 // Fake data taken from initial-tweets.json
-$(document).ready(function () {
+$(document).ready(function() {
 
   const tweetdata = [{
     "user": {
@@ -25,7 +25,7 @@ $(document).ready(function () {
   }
   ];
 
-  const createTweetElement = function (tweetObj) {
+  const createTweetElement = function(tweetObj) {
     const $tweet = $(`
         <article class="tweet">
           <header>
@@ -49,7 +49,7 @@ $(document).ready(function () {
     return $tweet;
   }
 
-  const renderTweets = function (tweetObjArr) {
+  const renderTweets = function(tweetObjArr) {
     for (const tweet of tweetObjArr) {
       const $tweet = createTweetElement(tweet);
       $('.all-tweets').append($tweet);
@@ -71,5 +71,19 @@ $(document).ready(function () {
         console.error(error);
       });
   });
+
+  const loadTweets = () => {
+    $.get('/tweets')
+
+    .then(response => {
+      console.log(response)
+      renderTweets(response);
+    })
+    .catch(error => {
+      console.error(error);
+    });
+};
+    
+  loadTweets();
 
 });
