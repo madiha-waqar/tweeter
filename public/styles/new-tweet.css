@@ -46,3 +46,16 @@
  .over-limit {
    color: red;
  }
+
+ .error-message {
+  display: none;
+  width: 75%;
+  padding: 15px;
+  background-color: #f44336;
+  color: #FFF;
+  border-radius: 20px;
+  text-align: center;
+	background-image: url('https://i.imgur.com/GnyDvKN.png');
+  background-repeat: no-repeat;
+  background-position: 10px center;
+ }
