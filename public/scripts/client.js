@@ -1,17 +1,22 @@
-// Fake data taken from initial-tweets.json
-$(document).ready(function () {
 
-  const createTweetElement = function (tweetObj) {
-    const $tweet = $(`
+// escape function to avoid cross-scripting attacks on 
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
+const createTweetElement = function (tweetObj) {
+  const $tweet = $(`
         <article class="tweet">
           <header>
             <div>
-              <img src="${tweetObj.user.avatars}" alt="tweeter-user-icon">
-              <p>${tweetObj.user.name}</p>
+              <img src="${escape(tweetObj.user.avatars)}" alt="tweeter-user-icon">
+              <p>${escape(tweetObj.user.name)}</p>
             </div>
-            <p>${tweetObj.user.handle}</p>
+            <p>${escape(tweetObj.user.handle)}</p>
           </header>
-          <p>${tweetObj.content.text}</p>
+          <p>${escape(tweetObj.content.text)}</p>
           <footer>
             <p>${timeago.format(tweetObj.created_at)}</p>
             <p>
@@ -22,15 +27,17 @@ $(document).ready(function () {
           </footer>
         </article>
     `);
-    return $tweet;
-  }
+  return $tweet;
+}
 
-  const renderTweets = function (tweetObjArr) {
-    for (const tweet of tweetObjArr) {
-      const $tweet = createTweetElement(tweet);
-      $('.all-tweets').prepend($tweet); // prepend will add new tweet to the beginning
-    }
+const renderTweets = function (tweetObjArr) {
+  for (const tweet of tweetObjArr) {
+    const $tweet = createTweetElement(tweet);
+    $('.all-tweets').prepend($tweet); // prepend will add new tweet to the beginning
   }
+}
+
+$(document).ready(function () {
 
   const form = document.querySelector('form');
   form.addEventListener('submit', function (event) {
@@ -58,15 +65,15 @@ $(document).ready(function () {
   });
 
   const loadTweets = () => {
-  $.get('/tweets')
+    $.get('/tweets')
 
-    .then(response => {
-      console.log(response)
-      renderTweets(response);
-    })
-    .catch(error => {
-      console.error(error);
-    });
-};
+      .then(response => {
+        console.log(response)
+        renderTweets(response);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  };
 
 });
