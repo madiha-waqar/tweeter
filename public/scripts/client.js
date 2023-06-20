@@ -44,12 +44,23 @@ $(document).ready(function () {
     event.preventDefault();
 
     const newTweetText = $(this).find('textarea').val();
+    const errorMessage = $('.error-message');
+
+    function displayErrorMessage(message, duration) {
+      errorMessage.text(message);
+      errorMessage.slideDown(600);
+    
+      setTimeout(() => {
+        errorMessage.slideUp(600);
+      }, duration);
+    }
+
 
     if (!newTweetText) {
-      alert('Your tweet must not be empty. What would you like to tweet about today?');
+      displayErrorMessage('Your tweet must not be empty. What would you like to tweet about today?', 3000);
 
     } else if (newTweetText.length > 140) {
-      alert('Your tweet exceeds the maximum character limit of 140!');
+      displayErrorMessage('Your tweet exceeds the maximum character limit. Please write a tweet of 140 or less characters.', 3000);
 
     } else {
       const serializedData = $(this).serialize();
