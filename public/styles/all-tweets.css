@@ -74,6 +74,6 @@ footer>p>i {
 }
 
 /* Change color of icons on hovering */
-i:hover {
+.tweet i:hover {
   color: #b6942e ;
 }
