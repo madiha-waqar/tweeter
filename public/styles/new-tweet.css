@@ -43,19 +43,24 @@
  }
 
  /* Counter turns red when goes over limit */
- .over-limit {
+ .over-limit,
+ .arrow {
    color: red;
+ }
+ 
+ .outline {
+   -webkit-text-stroke: 1px red;
  }
 
  .error-message {
-  display: none;
-  width: 65%;
-  padding: 15px;
-  background-color: #f44336;
-  color: #FFF;
-  border-radius: 20px;
-  text-align: center;
-	background-image: url('https://i.imgur.com/GnyDvKN.png');
-  background-repeat: no-repeat;
-  background-position: 10px center;
+   display: none;
+   width: 65%;
+   padding: 15px;
+   background-color: #f44336;
+   color: #FFF;
+   border-radius: 20px;
+   text-align: center;
+   background-image: url('https://i.imgur.com/GnyDvKN.png');
+   background-repeat: no-repeat;
+   background-position: 10px center;
  }
