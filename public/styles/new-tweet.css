@@ -43,13 +43,8 @@
  }
 
  /* Counter turns red when goes over limit */
- .over-limit,
- .arrow {
+ .over-limit {
    color: red;
- }
- 
- .outline {
-   -webkit-text-stroke: 1px red;
  }
 
  .error-message {

@@ -32,3 +32,39 @@ nav #right-nav .arrow {
   display: flex;
   justify-content: center;
 }
+
+.arrow {
+  color: red;
+  font-weight: bold;
+  margin-top: 0.3em;
+}
+
+.outline {
+  -webkit-text-stroke: 1px red;
+}
+
+.arrow:hover{
+  animation: updown 2s ease infinite;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(0%);
+  }
+
+  25% {
+    transform: translateY(20%);
+  }
+
+  50% {
+    transform: translateY(40%);
+  }
+
+  75% {
+    transform: translateY(20%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
