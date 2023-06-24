@@ -55,7 +55,10 @@ $(document).ready(function () {
       }, duration);
     }
 
-
+    $('.arrow').click(() => {
+      $('.new-tweet').slideToggle();
+    })
+  
     if (!newTweetText) {
       displayErrorMessage('Your tweet must not be empty. What would you like to tweet about today?', 3000);
 
