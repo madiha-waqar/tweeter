@@ -118,6 +118,8 @@ $(document).ready(function () {
       });
     // Clears out text area after successful loading of tweet
     $('.new-tweet textarea').val('');
+    // Sets the text of counter back to 140 after successful loading of tweet
+    $('.counter').text('140');
   };
 
 });
