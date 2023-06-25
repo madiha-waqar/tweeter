@@ -52,8 +52,8 @@ $(document).ready(function () {
     // Prevent the default form submission behavior
     event.preventDefault();
 
-    // Get the text entered in the textarea of the form
-    const newTweetText = $(this).find('textarea').val();
+    // Get the text entered in the textarea of the form. It will remove leading and trailing whitespace from the text
+    const newTweetText = $(this).find('textarea').val().trim();
     // Select the element for displaying error messages
     const errorMessage = $('.error-message');
 
