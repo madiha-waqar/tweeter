@@ -100,8 +100,6 @@ $(document).ready(function () {
           console.error(error);
         });
     }
-    // Clears out text area after successful loading of tweet
-    $('.new-tweet textarea').val('');
   });
 
 
@@ -118,6 +116,8 @@ $(document).ready(function () {
         // Log the error to the console
         console.error(error);
       });
+    // Clears out text area after successful loading of tweet
+    $('.new-tweet textarea').val('');
   };
 
 });
