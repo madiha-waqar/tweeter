@@ -100,7 +100,10 @@ $(document).ready(function () {
           console.error(error);
         });
     }
+    // Clears out text area after successful loading of tweet
+    $('.new-tweet textarea').val('');
   });
+
 
   // Load tweets from the server
   const loadTweets = () => {
@@ -116,4 +119,5 @@ $(document).ready(function () {
         console.error(error);
       });
   };
+
 });
