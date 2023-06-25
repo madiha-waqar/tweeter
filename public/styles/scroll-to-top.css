@@ -1,0 +1,27 @@
+/* Scroll up button (hidden until scroll down with fixed position) */
+.scroll-up {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  padding: 20px 25px;
+}
+/* Pointer change appearance on hover so its clear to user that it's clickable */
+.scroll-up:hover {
+  cursor: pointer;
+  background-position: 100% 0;
+  transition: all .4s ease-in-out;
+  background: rgb(253,29,29);
+  background: radial-gradient(circle, rgba(253,29,29,1) 50%, rgba(50,71,138,1) 70%);
+  }
+
+/* Arrow icon in scroll up button */
+.scroll-up i {
+  font-size: 1.5em;
+  color: white;
+}
