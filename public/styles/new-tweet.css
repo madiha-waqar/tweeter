@@ -40,6 +40,16 @@
    background-color: #4056A1;
    color: #FFF;
    border: none;
+   padding: 8px;
+   border-radius: 3px;
+ }
+
+ /* Styling the tweet button with button press effect*/
+ .tweet-submission button:hover,
+ .tweet-submission button:active {
+   cursor: pointer;
+   margin: 1px 1px 0;
+   box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.24);
  }
 
  /* Counter turns red when goes over limit */
