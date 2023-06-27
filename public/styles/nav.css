@@ -33,20 +33,24 @@ nav #right-nav .arrow {
   justify-content: center;
 }
 
+/* Styles for the arrow icon */
 .arrow {
   color: red;
   font-weight: bold;
   margin-top: 0.3em;
 }
 
+/* Styles for outlined which applies on arrow */
 .outline {
   -webkit-text-stroke: 1px red;
 }
 
+/* New tweet arrow tweet animation */
 .arrow:hover{
   animation: updown 2s ease infinite;
 }
 
+/* Keyframe animation for the up-down movement of the arrow */
 @keyframes updown {
   0% {
     transform: translateY(0%);
