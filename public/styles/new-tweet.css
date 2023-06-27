@@ -24,6 +24,7 @@
    border: none;
  }
 
+ /* When tweet text area is focused */
  .tweet-details textarea:focus {
    outline: none;
  }
@@ -57,6 +58,7 @@
    color: red;
  }
 
+ /*Styles for error messages */
  .error-message {
    display: none;
    width: 65%;
