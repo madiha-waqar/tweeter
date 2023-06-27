@@ -28,7 +28,7 @@ This project is made by :raising_hand_woman: [Madiha Waqar](https://www.linkedin
 
 ## :sparkles: Final Product
 
-![registration-page.png](./docs/registration-page.png)
+![responsive-desktop.png](./docs/responsive-desktop.png)
 
 ## :dart: Features
 - **Complete form design and implementation to compose tweets with retweet, like and share icons**
@@ -54,7 +54,7 @@ as the user types in the textarea
    - Counter turns red when more than 140 characters have been
 typed into the textarea
 
-## :dart: Responsive Design
+## :computer: Responsive Design :iphone:
 - On larger screens such as desktops and laptops with a width over 1024 pixels, your profile will be positioned on the left side while tweets will be displayed on the right side.
 - On smaller devices like mobile and tablets, the sections will be rearranged to stack on top of each other. In this layout, the profile section will appear on top, followed by the tweets section at the bottom in single line column.
 
