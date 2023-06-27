@@ -40,7 +40,7 @@ This project is made by :raising_hand_woman: [Madiha Waqar](https://www.linkedin
 ![error-exceeds-character-limit.png](./docs/error-exceeds-character-limit.png)
  - Scroll to top button which activates on page scroll
 ![scroll-to-top-stretch.png](./docs/scroll-to-top-stretch.png)
- - Responsive design for smaller screens
+ - Responsive design for smaller screens   
 ![new-tweet-arrow-hides-on-scroll.png](./docs/new-tweet-arrow-hides-on-scroll.png)
 
 ## :dart: Features
