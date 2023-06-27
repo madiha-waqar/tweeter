@@ -1,4 +1,5 @@
-# :speech_balloon: Welcome to Tweeter: Spread your thoughts one tweet at a time! :loudspeaker:
+# :speech_balloon: Welcome to Tweeter
+# Spread your thoughts ~ One tweet at a time! :loudspeaker:
 
 Tweeter - Twitter clone is a simple, single-page web application that's user-friendly, visually dynamic, and responsive!
 
@@ -27,8 +28,20 @@ This project is made by :raising_hand_woman: [Madiha Waqar](https://www.linkedin
 4. Go to <http://localhost:8080/> in your browser and tweet away! :hatching_chick:
 
 ## :sparkles: Final Product
-
+ - Responsive design for screens 1024px and larger
 ![responsive-desktop.png](./docs/responsive-desktop.png)
+ - Compose tweet form toggles up or down when arrow icon is pressed
+![toggle-composenewtweet-stretch.png](./docs/toggle-composenewtweet-stretch.png)
+ - On hover the tweet displays shadow and the social icons change color
+![tweet-shadow-social-icons.gif](./docs/tweet-shadow-social-icons.gif)
+ - Error is displayed on submitting empty tweet or tweet with white trailing spaces
+![error-empty-tweet.png](./docs/error-empty-tweet.png)
+ - Error is displayed when tweet text crosses character limit of 140
+![error-exceeds-character-limit.png](./docs/error-exceeds-character-limit.png)
+ - Scroll to top button which activates on page scroll
+![scroll-to-top-stretch.png](./docs/scroll-to-top-stretch.png)
+ - Responsive design for smaller screens
+![new-tweet-arrow-hides-on-scroll.png](./docs/new-tweet-arrow-hides-on-scroll.png)
 
 ## :dart: Features
 - **Complete form design and implementation to compose tweets with retweet, like and share icons**
