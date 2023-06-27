@@ -11,6 +11,7 @@
 	flex-direction: column;
 }
 
+/* Styles for the header image */
 #header .header-img {
 	padding-top: 150px;
 }
