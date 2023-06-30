@@ -1,26 +1,16 @@
-
-// Escape function to avoid cross-scripting attacks on user generated content before renedering in browser
-const escape = function (str) {
-  // Creating temporary container a HTML div element
-  let div = document.createElement("div");
-  // Creates a new text node and appends the text str inside the div element
-  div.appendChild(document.createTextNode(str));
-  // Return HTML content of div, ensuring that any special characters in the original string are escaped and represented correctly in HTML format
-  return div.innerHTML;
-};
-
 // Create a new jQuery object representing an HTML article element with class "tweet"
 const createTweetElement = function (tweetObj) {
+  const safeText = $("<div>").text(tweetObj.content.text).html();
   const $tweet = $(`
         <article class="tweet">
           <header>
             <div>
-              <img src="${escape(tweetObj.user.avatars)}" alt="tweeter-user-icon">
-              <p>${escape(tweetObj.user.name)}</p>
+              <img src="${(tweetObj.user.avatars)}" alt="tweeter-user-icon">
+              <p>${(tweetObj.user.name)}</p>
             </div>
-            <p>${escape(tweetObj.user.handle)}</p>
+            <p>${(tweetObj.user.handle)}</p>
           </header>
-          <p>${escape(tweetObj.content.text)}</p>
+          <p>${safeText}</p>
           <footer>
             <p>${timeago.format(tweetObj.created_at)}</p>
             <p>
