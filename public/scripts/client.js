@@ -27,6 +27,9 @@ const createTweetElement = function (tweetObj) {
 
 // Render all tweets by adding them to the DOM in reverse order (newest first).
 const renderTweets = function (tweetObjArr) {
+  // Clears the tweet container before appending newly created tweets to prevent duplication
+  $(".all-tweets").empty();
+  
   for (const tweet of tweetObjArr) {
     const $tweet = createTweetElement(tweet);
     // Prepend will add new tweet to the beginning
