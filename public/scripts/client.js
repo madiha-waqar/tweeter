@@ -29,7 +29,7 @@ const createTweetElement = function (tweetObj) {
 const renderTweets = function (tweetObjArr) {
   // Clears the tweet container before appending newly created tweets to prevent duplication
   $(".all-tweets").empty();
-  
+
   for (const tweet of tweetObjArr) {
     const $tweet = createTweetElement(tweet);
     // Prepend will add new tweet to the beginning
@@ -85,9 +85,10 @@ $(document).ready(function () {
         .then(serializedData => {
           // Log the returned serialized data to the console
           console.log(serializedData);
+          // If the POST request is successfull then load the new tweet
+          loadTweets();
         })
-        // After the successful POST request, load the updated tweets
-        .then(loadTweets())
+
         // If any error occurs during the POST request
         .catch(error => {
           // Log the error to the console
