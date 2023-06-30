@@ -113,4 +113,6 @@ $(document).ready(function () {
     $('.counter').text('140');
   };
 
+  // Load tweets from the server everytime server is started or page loads
+  loadTweets();
 });
