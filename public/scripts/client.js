@@ -1,5 +1,6 @@
 // Create a new jQuery object representing an HTML article element with class "tweet"
 const createTweetElement = function (tweetObj) {
+  // Escape user-generated content to avoid cross-scripting attacks before inserting it into the HTML template
   const safeText = $("<div>").text(tweetObj.content.text).html();
   const $tweet = $(`
         <article class="tweet">
